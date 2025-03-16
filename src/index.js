@@ -20,4 +20,5 @@ window.addEventListener('changeURL', () => {
   removeWithRules(defaultRules)
 })
 
+// リスナーを登録してからセットアップする必要あり
 setupChangeURLEvent()

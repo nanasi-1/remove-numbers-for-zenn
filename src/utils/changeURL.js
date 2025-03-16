@@ -25,9 +25,10 @@ function setUpObserver() {
 
 // ブラウザバック用
 function setupPopState() {
-  window.addEventListener('popstate', () => {
-    dispatch()
+  window.addEventListener('popstate', async () => {
+    await sleep(200) // 前のページを消すのを回避
     console.log('popstate')
+    dispatch()
   });
 }
 
