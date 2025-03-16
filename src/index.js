@@ -1,6 +1,7 @@
 import { removeWithRules } from "./features.js";
+import { setupChangeURLEvent } from "./utils.js";
 
-console.log("[Remove Numbers for Zenn] running...")
+console.debug("[Remove Numbers for Zenn] running...")
 
 /**
  * パスに対してどのクラスを削除するかのルール
@@ -14,4 +15,9 @@ const defaultRules = [
   }
 ]
 
-removeWithRules(defaultRules)
+window.addEventListener('changeURL', () => {
+  console.debug("[Remove Numbers for Zenn] change url...")
+  removeWithRules(defaultRules)
+})
+
+setupChangeURLEvent()
