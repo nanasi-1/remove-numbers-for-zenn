@@ -10,9 +10,21 @@ console.debug("[Remove Numbers for Zenn] running...")
  */
 const defaultRules = [
   {
-    selectors: ["LikeButton_likedCount__", "BookmarkButton_bookmarkedCount__"],
     regex: RegExp("/.+/articles/.+"),
-  }
+    selectors: ["LikeButton_likedCount__", "BookmarkButton_bookmarkedCount__"],
+  },
+  {
+    regex: RegExp("/$"),
+    selectors: ["ArticleList_like__", "ArticleList_date__", "BookLink_likedCount__"],
+  },
+  {
+    regex: RegExp("/articles/explore$"),
+    selectors: ["ArticleList_like__", "ArticleList_date__", "BookLink_likedCount__"]
+  },
+  {
+    regex: RegExp("/search"),
+    selectors: ["ArticleList_like__", "BookLink_likedCount__"]
+  },
 ]
 
 window.addEventListener('changeURL', () => {

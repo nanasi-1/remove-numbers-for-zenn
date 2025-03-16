@@ -8,10 +8,12 @@ function setUpObserver() {
   let oldUrl = ''; // URLの一時保管用
 
   const observer = new MutationObserver(async () => {
-    await sleep(50); // 判定が速すぎたため
+    await sleep(20); // 判定が速すぎたため
     if (oldUrl !== location.href) {
       dispatch()
       oldUrl = location.href; // oldUrlを更新
+      await sleep(100) // もう一回やれば安定する説
+      dispatch()
     }
   });
 
