@@ -1,5 +1,5 @@
 import { removeWithRules } from "./features.js";
-import { setupChangeURLEvent } from "./utils.js";
+import { setupChangeURLEvent } from "./utils/changeURL.js";
 
 console.debug("[Remove Numbers for Zenn] running...")
 
