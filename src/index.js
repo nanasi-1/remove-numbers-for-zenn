@@ -43,7 +43,7 @@ const defaultRules = [
   },
   {
     regex: RegExp("/[^/]+"), // プロフィール
-    selectors: ["UserHeader_count__", "ArticleCard_likes__", "UserHeader_tabItemCount__I_", "ScrapRow_commentsCount__"]
+    selectors: ["UserHeader_count__", "ArticleCard_likes__", "BookLink_likedCount__", "UserHeader_tabItemCount__I_", "ScrapRow_commentsCount__"]
   },
   {
     regex: RegExp("/dashboard$"),
