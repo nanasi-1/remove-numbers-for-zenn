@@ -44,7 +44,15 @@ const defaultRules = [
   {
     regex: RegExp("/[^/]+"), // プロフィール
     selectors: ["UserHeader_count__", "ArticleCard_likes__", "UserHeader_tabItemCount__I_", "ScrapRow_commentsCount__"]
-  }
+  },
+  {
+    regex: RegExp("/dashboard$"),
+    selectors: ["ArticleItem_like__"]
+  },
+  {
+    regex: RegExp("/dashboard/library"),
+    selectors: ["CommonPostItemRow_meta__"]
+  },
 ]
 
 window.addEventListener('changeURL', () => {
