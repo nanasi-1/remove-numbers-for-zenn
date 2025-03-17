@@ -1,7 +1,7 @@
 {
   "name": "Remove Numbers for Zenn",
   "description": "Zennからいいね数やブクマ数を抹消することで、数字を気にせず生活できます",
-  "version": "0.1",
+  "version": "1.0.0",
   "manifest_version": 3,
   "content_scripts": [
     {
